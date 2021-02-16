@@ -52,10 +52,14 @@ function CookieStore(location, minCustomers, maxCustomers, avgSale) {
         thEl = document.createElement('th');
         thEl.textContent = 'Total';
         trEl.appendChild(thEl);
-    }
-      CookieStore.prototype.renders = function () {
+     
 
+    }
     
+
+
+
+      CookieStore.prototype.render = function () {
 
         let trEl = document.createElement('tr');
         tableEl.appendChild(trEl);
@@ -73,7 +77,12 @@ function CookieStore(location, minCustomers, maxCustomers, avgSale) {
         tdEl = document.createElement('td');
         tdEl.textContent = this.totalCookies;
         trEl.appendChild(tdEl);
-       };
+        
+       
+      }
+   
+    
+
 
 
       CookieStore.prototype.renderAll = function() {
@@ -110,10 +119,11 @@ function CookieStore(location, minCustomers, maxCustomers, avgSale) {
           16, 
           4.6);
           
+          
           seattle.renderHeaders();
-          seattle.renders();
-          tokyo.renders();
-          dubai.renders();
-          paris.renders();
-          lima.renders();
+          seattle.render();
+          tokyo.render();
+          dubai.render();
+          paris.render();
+          lima.render();
           
