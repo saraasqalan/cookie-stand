@@ -101,20 +101,40 @@ function CookieStore(location, minCustomers, maxCustomers, avgSale) {
        const dubai =new CookieStore( 'Dubai', 11,  38,  3.7);
        const paris = new CookieStore( 'Paris',  20,  38,  2.3);
        const lima =new CookieStore( 'Lima',  2,  16,  4.6);
+
+
+
+
           seattle.getAvgCookiesHour();
          tokyo.getAvgCookiesHour();
           dubai.getAvgCookiesHour();
          paris.getAvgCookiesHour();
           lima.getAvgCookiesHour();
-
          renderHeaders();
-
          seattle.render();
          tokyo.render();
          dubai.render();
          paris.render();
          lima.render();
         renderFootr();
-         
-          
+
+
+        const form = document.getElementById("sales")  ;
+        form.addEventListener("submit", function(event){
+        event.preventDefault();
+        console.log(event.target);
+
+       const location = event.target.location.value; 
+       const minCustomers = event.target.minCustomers.value;
+       const maxCustomers = event.target.maxCustomers.value;
+       const avgSale = event.target.avgSale.value;
+ 
+
+       const Loc = new CookieStore (location,minCustomers,maxCustomers,avgSale);
+       Loc.getAvgCookiesHour();
+       Loc.render();
+       form.reset();      
+}) 
+ 
+
           
