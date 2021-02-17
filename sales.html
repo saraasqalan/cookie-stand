@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="./css/reset.css">
-    
-<head>
+        <head>
    
 
     <title>Salmon Cookies - Sales</title>
@@ -12,6 +11,9 @@
 <body>
     <header>
         <a id="nav-logo" class="salmon-fish" href="../index.html">Salmon Cookie</a>
+       
+       
+       
         <nav>
             <ul>
               <li><a href="./sales.html">Sales</a></li>
@@ -20,6 +22,23 @@
           </nav>
     </header>
     <main>
+        <form id="sales">
+            <fieldset>
+              <legend>Shop information</legend>
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="type the city" />
+    
+              <label for="minCustomers">minCustomers </label>
+              <input type="text" id="minCustomers" />
+    
+              <label for="maxCustomers">maxCustomers</label>
+              <input type="text" id="maxCustomers"  />
+    
+              <label for="avgSale">avgSale</label>
+              <input type="text" id="avgSale"  />
+              <input type="submit" />
+            </fieldset>
+          </form>
         <img src="./images/salmon.png" alt="salmon cookies" class ="centered" >
 
     </main>
